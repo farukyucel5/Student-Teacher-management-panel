@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class User_interface {
     public static void main(String[] args) {
         Teacher_affairs teacher=new Teacher_affairs();
+        Student_affairs student=new Student_affairs();
 
         Scanner scan=new Scanner(System.in);
         System.out.println("======================================================");
@@ -87,27 +88,27 @@ public class User_interface {
                         String student_no=scan.next();
                         System.out.println("Batch_no: ");
                         String batch_no=scan.next();
-                        teacher.add(name,surname,id,age,student_no,batch_no);
+                        student.add(name,surname,id,age,student_no,batch_no);
                         break;
 
                     case "2":
                         System.out.println("Id no: \n");
                         String id1=scan.next();
-                        System.out.println(teacher.search(id1));
+                        System.out.println(student.search(id1));
                         break;
 
 
                     case "3":
-                        teacher.listing();
+                        student.listing();
                         break;
                     case "4":
                         System.out.println("Id no: \n");
                         String id2=scan.next();
-                        teacher.delete(id2);
+                        student.delete(id2);
                         break;
 
                     case "5":
-                        teacher.exit();
+                        student.exit();
                         break;
                     default:
                         System.out.println("please enter a valid input");
@@ -117,7 +118,8 @@ public class User_interface {
         }
 
         if (input.equals("q"))
-            teacher.exit();
+            System.exit(0);
+
 
     }
 }

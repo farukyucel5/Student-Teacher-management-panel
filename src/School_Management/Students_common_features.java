@@ -36,12 +36,12 @@ public abstract class Students_common_features {
     @Override
     public String toString() {
         return
-                "s_first_name= " + s_first_name +
+                "{s_first_name= " + s_first_name +
                 ", s_last_name= " + s_last_name +
                 ", s_id='" + s_id +
                 ", s_age=" + s_age +
                 ", student_no= " + student_no +
                 ", batch_no= " + batch_no +
-                '}';
+                "}\n";
     }
 }

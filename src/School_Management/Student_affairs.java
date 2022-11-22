@@ -17,7 +17,7 @@ public class Student_affairs extends Students_common_features {
 
     @Override
     public void add(String name, String surname, String id, double age, String student_no, String batch_no) {
-        Student_affairs student=new Student_affairs();
+        Student_affairs student=new Student_affairs(name,surname,id,age,student_no,batch_no);
         students.add(student);
     }
 
